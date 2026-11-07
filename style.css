@@ -1,0 +1,279 @@
+body {
+    background-color: #F5F7FA;
+    font-family: Arial;
+    text-align: center;
+    direction: rtl;
+}
+
+h1 {
+    color: #1F3A5F;
+    font-size: 32px;
+}
+
+h2 {
+    color: #2F6F6D;
+}
+
+p {
+    font-size: 18px;
+    color: #444B55;
+}
+/* Cars Page */
+
+.car-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.car {
+    background-color: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.car h2 {
+    color: #1F3A5F;
+}
+
+.car p {
+    color: #444B55;
+    line-height: 1.6;
+}
+.car img {
+    width: 250px;
+    height: 170px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+}
+.car-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.car {
+    width: 280px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}.book-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+}
+form {
+    width: 350px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+form button + button {
+    margin-top: 15px;
+}
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+.home-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f5f8;
+    padding: 40px;
+}
+
+.home-page h1 {
+    color: #1a365d;
+    font-size: 36px;
+}
+
+.home-page h2 {
+    color: #444;
+}
+
+.home-page p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.home-page a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.navbar {
+    background-color: #1a365d;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffc107;
+}
+.hero img {
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+.about {
+    background-color: white;
+    padding: 25px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+    color: #1a365d;
+    font-size: 26px;
+}
+
+.about p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f8;
+    text-align: center;
+    padding: 30px;
+}
+
+body h1 {
+    color: #1a365d;
+    font-size: 32px;
+}
+
+body h2 {
+    color: #007bff;
+    margin-top: 30px;
+}
+
+body p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.team {
+    background-color: white;
+    width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team h2 {
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+.team table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.team th,
+.team td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.team th {
+    background-color: #1a365d;
+    color: white;
+}
+
+.team td {
+    color: #444;
+}
+.student-notes {
+    background-color: white;
+    width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.student-notes h2 {
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+.student-notes p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+}
