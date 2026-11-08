@@ -1,39 +1,54 @@
 function calculateDays() {
+
     const pickup = document.getElementById("pickupDate").value;
     const returning = document.getElementById("returnDate").value;
-    const carPrice = document.getElementById("carSelect").value;
 
-    if (pickup === "" || returning === ""  ||carPrice === "") {
-        alert("Please select the car and both dates.");
-        return;
-    }
+    const selectedCars = document.querySelectorAll(".car-select:checked");
 
-    const [y1, m1, d1] = pickup.split("-").map(Number);
-    const [y2, m2, d2] = returning.split("-").map(Number);
+    const startDate = new Date(pickup + "T00:00:00");
+    const endDate = new Date(returning + "T00:00:00");
 
-    const startDate = Date.UTC(y1, m1 - 1, d1);
-    const endDate = Date.UTC(y2, m2 - 1, d2);
-
-    const days = (endDate - startDate) / (1000 * 60 * 60 * 24);
+    const days = Math.round((endDate - startDate) / (1000 * 60 * 60 * 24));
 
     if (days <= 0) {
         alert("Return date must be after pickup date.");
         return;
     }
 
-    const totalPrice = days * Number(carPrice);
+    let total = 0;
+    let message = "Booking Details:\n\n";
 
-    alert("Rental duration: " + days + " days\nTotal price: $" + totalPrice);
-}
-$(document).ready(function(){
+    selectedCars.forEach(function(car) {
 
-    $(".details-btn").click(function(){
+        const name = car.dataset.name;
+        const price = Number(car.dataset.price);
+        const carTotal = price * days;
 
-        $(this).next(".car-details").slideToggle();
+        total += carTotal;
+
+        message += "Car: " + name + "\n";
+        message += "Rental Days: " + days + "\n";
+        message += "Daily Price: " + price + " S.P\n";
+        message += "Car Total: " + carTotal + " S.P\n\n";
 
     });
+
+    let discount = 0;
+
+    if (days > 7) {
+        discount = total * 0.10;
+    }
+
+    const finalTotal = total - discount;
+
+    message += "Total Before Discount: " + total + " S.P\n";
+    message += "Discount: " + discount + " S.P\n";
+    message += "Final Total: " + finalTotal + " S.P";
+
+    alert(message);
+}
     
-});
+
 
 $("#booking-form").submit(function(event) {
 
@@ -48,9 +63,16 @@ $("#booking-form").submit(function(event) {
 
     // National ID validation
     if (!/^\d{11}$/.test(nationalId)) {
-        alert("National ID must contain exactly 11 digits.");
-        return;
-    }
+    alert("National ID must contain exactly 11 digits.");
+    return;
+}
+
+let provinceCode = Number(nationalId.substring(0, 2));
+
+if (provinceCode < 1 || provinceCode > 14) {
+    alert("The first two digits must represent a valid province code (01-14).");
+    return;
+}
 
     // Date validation
     if (pickup === "" || returning === "") {
@@ -92,3 +114,18 @@ $("#booking-form").submit(function(event) {
     calculateDays();
 
 });
+$("#continue-btn").click(function() {
+
+    if ($(".car-select:checked").length === 0) {
+        alert("Please select at least one car.");
+        return;
+    }
+
+    $("#booking-section").slideDown();
+
+    $("html, body").animate({
+        scrollTop: $("#booking-section").offset().top
+    }, 600);
+
+});
+

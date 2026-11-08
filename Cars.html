@@ -15,8 +15,7 @@
         <div class="car">
             <h2>Toyota Corolla</h2>
             <label>
-                <input type="checkbox" class="car-select" value="CR-001">
-                Select Car
+                <input type="checkbox" class="car-select" value="CR-001" data-name="Toyota Corolla" data-price="250000">
             </label>
 
             <img src="corolla.jpg" alt="Toyota corolla">
@@ -38,9 +37,8 @@
 
         <div class="car">
             <h2>Kia Sportage</h2>
-            ت<label>
-                <input type="checkbox" class="car-select" value="CR-002">
-                Select Car
+           <label>
+                <input type="checkbox" class="car-select" value="CR-002" data-name="Kia Sportage" data-price="400000">
             </label>
             <img src="kia.jpg" alt="kia Sportage">
             <p>Modern and comfortable SUV.</p>
@@ -61,8 +59,7 @@
         <div class="car">
             <h2>Hyundai Elantra</h2>
             <label>
-                <input type="checkbox" class="car-select" value="CR-003">
-                Select Car
+               <input type="checkbox" class="car-select" value="CR-003" data-name="Hyundai Elantra" data-price="300000">
             </label>
             <img src="hyundai.jpg" alt="Hyundai Elantra">
             <p>Stylish and fuel-efficient car.</p>
@@ -82,10 +79,10 @@
         <div class="car">
             <img src="chevrolet.jpg" alt="Chevrolet Spark">
             <h2>Chevrolet Spark</h2>
-            <label>
-                <input type="checkbox" class="car-select" value="CR-004">
-                Select Car
-            </label>
+               <label>
+    <input type="checkbox" class="car-select" value="CR-004">
+    Select Car
+</label>
             <p>Small and economical car.</p>
             <p>Year: 2021</p>
             <p>Price: 180000 S.P per day</p>
@@ -105,9 +102,9 @@
     <img src="bmw.jpg" alt="BMW 5 Series">
     <h2>BMW 5 Series</h2>
     <label>
-        <input type="checkbox" class="car-select" value="CR-005">
-        Select Car
-    </label>
+    <input type="checkbox" class="car-select" value="CR-005">
+    Select Car
+</label>
     <p>Luxury and comfortable car.</p>
     <p>Year: 2023</p>
     <p>Price: 500000 S.P per day</p>
@@ -124,35 +121,46 @@
 </div>
 <div class="continue-container">
     <button id="continue-btn">Continue</button>
+    <div id="booking-section" style="display:none;">
+
+    <h2>Booking Form</h2>
+
+    <form id="booking-form">
+        <label>Customer Name:</label>
+        <input type="text" id="fullName" >
+        <br><br>
+
+        <label>National ID:</label>
+        <input type="text" id="nationalId" required>
+        <br><br>
+
+        <label>Pickup Date:</label>
+        <input type="date" id="pickupDate" required>
+        <br><br>
+
+        <label>Return Date:</label>
+        <input type="date" id="returnDate" required>
+        <br><br>
+
+        <label>Mobile Number:</label>
+        <input type="tel" id="mobile" >
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" >
+        <br><br>
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+
+</div>
+    
 </div>
 
 
     </div>
-    <h2>Booking Form</h2>
-
-<form id="booking-form">
-
-    <label>Full Name:</label>
-    <input type="text" id="fullName" placeholder="Enter your full name">
-
-    <label>National ID:</label>
-    <input type="text" id="nationalId" placeholder="11 digits">
-
-    <label>Start Date:</label>
-    <input type="date" id="startDate">
-
-    <label>End Date:</label>
-    <input type="date" id="endDate">
-
-    <label>Mobile Number:</label>
-    <input type="tel" id="mobile" placeholder="MTN or Syriatel number">
-
-    <label>Email:</label>
-    <input type="email" id="email" placeholder="Enter your email">
-
-    <button type="submit">Submit Booking</button>
-
-</form>
+    
     <script src="script.js"></script>
 </body>
 </html>
