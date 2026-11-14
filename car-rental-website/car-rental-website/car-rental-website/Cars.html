@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>السيارات - Our Cars</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="Cars.html">Our Cars</a>
+        <a href="AboutUs.html">About Us</a>
+    </div>
+
+    <h1>السيارات المتوفرة للتأجير</h1>
+
+    <!-- ===== AI Feature: Smart Car Recommendation Assistant ===== -->
+    <div class="box assistant">
+        <h2>مساعد اختيار السيارة الذكي (AI Feature)</h2>
+        <p class="hint">اكتب احتياجك بلغتك، مثلاً: أحتاج سيارة لعائلة من 5 أشخاص لمدة 10 أيام وميزانيتي محدودة.</p>
+        <label for="assistant-input">ماذا تحتاج؟</label>
+        <textarea id="assistant-input" rows="3" cols="40"></textarea>
+        <button type="button" id="ask-assistant">اسأل المساعد</button>
+        <div id="assistant-reply"></div>
+        <button type="button" id="apply-suggestion">اختيار المقترح</button>
+    </div>
+
+    <!-- ===== Cars table ===== -->
+    <div class="box">
+        <table class="cars-table">
+            <tr>
+                <th>الرمز</th>
+                <th>الصورة</th>
+                <th>الموديل</th>
+                <th>سنة الصنع</th>
+                <th>السعر اليومي</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+
+            <tr class="car-row">
+                <td class="code">CR-001</td>
+                <td><img src="corolla.jpg" alt="Toyota Corolla" /></td>
+                <td class="model">Toyota Corolla</td>
+                <td class="year">2023</td>
+                <td><span class="price">250000</span> ل.س</td>
+                <td><input type="checkbox" class="show-details" title="إظهار التفاصيل" /></td>
+                <td><input type="checkbox" class="car-select" value="CR-001" title="اختيار السيارة" /></td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="7">
+                    <span>نوع الوقود: <span class="fuel">بنزين</span></span>
+                    <span>ناقل الحركة: <span class="transmission">أوتوماتيك</span></span>
+                    <span>عدد المقاعد: <span class="seats">5</span></span>
+                    <span>عداد الكيلومترات: <span class="mileage">45000</span> كم</span>
+                    <span>اللون: <span class="color">خمري</span></span>
+                </td>
+            </tr>
+
+            <tr class="car-row">
+                <td class="code">CR-002</td>
+                <td><img src="kia.jpg" alt="Kia Sportage" /></td>
+                <td class="model">Kia Sportage</td>
+                <td class="year">2022</td>
+                <td><span class="price">400000</span> ل.س</td>
+                <td><input type="checkbox" class="show-details" title="إظهار التفاصيل" /></td>
+                <td><input type="checkbox" class="car-select" value="CR-002" title="اختيار السيارة" /></td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="7">
+                    <span>نوع الوقود: <span class="fuel">بنزين</span></span>
+                    <span>ناقل الحركة: <span class="transmission">أوتوماتيك</span></span>
+                    <span>عدد المقاعد: <span class="seats">5</span></span>
+                    <span>عداد الكيلومترات: <span class="mileage">60000</span> كم</span>
+                    <span>اللون: <span class="color">أبيض</span></span>
+                </td>
+            </tr>
+
+            <tr class="car-row">
+                <td class="code">CR-003</td>
+                <td><img src="hyundai.jpg" alt="Hyundai Elantra" /></td>
+                <td class="model">Hyundai Elantra</td>
+                <td class="year">2024</td>
+                <td><span class="price">300000</span> ل.س</td>
+                <td><input type="checkbox" class="show-details" title="إظهار التفاصيل" /></td>
+                <td><input type="checkbox" class="car-select" value="CR-003" title="اختيار السيارة" /></td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="7">
+                    <span>نوع الوقود: <span class="fuel">بنزين</span></span>
+                    <span>ناقل الحركة: <span class="transmission">أوتوماتيك</span></span>
+                    <span>عدد المقاعد: <span class="seats">5</span></span>
+                    <span>عداد الكيلومترات: <span class="mileage">20000</span> كم</span>
+                    <span>اللون: <span class="color">أزرق</span></span>
+                </td>
+            </tr>
+
+            <tr class="car-row">
+                <td class="code">CR-004</td>
+                <td><img src="chevrolet.jpg" alt="Chevrolet Spark" /></td>
+                <td class="model">Chevrolet Spark</td>
+                <td class="year">2021</td>
+                <td><span class="price">180000</span> ل.س</td>
+                <td><input type="checkbox" class="show-details" title="إظهار التفاصيل" /></td>
+                <td><input type="checkbox" class="car-select" value="CR-004" title="اختيار السيارة" /></td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="7">
+                    <span>نوع الوقود: <span class="fuel">بنزين</span></span>
+                    <span>ناقل الحركة: <span class="transmission">عادي</span></span>
+                    <span>عدد المقاعد: <span class="seats">4</span></span>
+                    <span>عداد الكيلومترات: <span class="mileage">85000</span> كم</span>
+                    <span>اللون: <span class="color">رمادي</span></span>
+                </td>
+            </tr>
+
+            <tr class="car-row">
+                <td class="code">CR-005</td>
+                <td><img src="bmw.jpg" alt="BMW 5 Series" /></td>
+                <td class="model">BMW 5 Series</td>
+                <td class="year">2023</td>
+                <td><span class="price">500000</span> ل.س</td>
+                <td><input type="checkbox" class="show-details" title="إظهار التفاصيل" /></td>
+                <td><input type="checkbox" class="car-select" value="CR-005" title="اختيار السيارة" /></td>
+            </tr>
+            <tr class="details-row">
+                <td colspan="7">
+                    <span>نوع الوقود: <span class="fuel">بنزين</span></span>
+                    <span>ناقل الحركة: <span class="transmission">أوتوماتيك</span></span>
+                    <span>عدد المقاعد: <span class="seats">5</span></span>
+                    <span>عداد الكيلومترات: <span class="mileage">30000</span> كم</span>
+                    <span>اللون: <span class="color">أحمر</span></span>
+                </td>
+            </tr>
+        </table>
+
+        <button type="button" id="continue-btn">متابعة</button>
+    </div>
+
+    <!-- ===== Booking form (appears on the same page after pressing "Continue") ===== -->
+    <div id="booking-section">
+        <form id="booking-form" action="#" method="post">
+            <fieldset>
+                <legend>نموذج طلب الحجز</legend>
+
+                <label for="fullName">الاسم الكامل (أحرف عربية فقط):</label>
+                <input type="text" id="fullName" name="fullName" />
+
+                <label for="nationalId">الرقم الوطني (11 خانة) *:</label>
+                <input type="text" id="nationalId" name="nationalId" maxlength="11" />
+
+                <label for="pickupDate">تاريخ بداية التأجير (yyyy-mm-dd) *:</label>
+                <input type="text" id="pickupDate" name="pickupDate" maxlength="10" />
+
+                <label for="returnDate">تاريخ نهاية التأجير (yyyy-mm-dd) *:</label>
+                <input type="text" id="returnDate" name="returnDate" maxlength="10" />
+
+                <label for="mobile">رقم الموبايل (Syriatel أو MTN):</label>
+                <input type="tel" id="mobile" name="mobile" maxlength="10" />
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" />
+
+                <button type="submit">إرسال</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="myFunctions.js"></script>
+</body>
+</html>
